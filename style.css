@@ -1,0 +1,389 @@
+/*
+    Theme Name: Industry Dive
+    Author: Imran Hossen
+    Author URI: https://hmime.com
+    Version: 1.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    color: #001b55;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+ul,
+div {
+    margin: 0;
+}
+
+div.container {
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+article.post {
+    border-bottom: 4px dashed #ecf0f1;
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+}
+
+.site-header {
+    color: white;
+}
+
+.site-footer {
+    background-color: #e2e3e4;
+}
+
+.header-inner {
+    margin: 0 20em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.header-inner>.menu ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+    color: #1f4393;
+}
+
+.breadcrumb {
+    background-color: #1f4393;
+    color: white;
+    text-align: center;
+}
+
+ul.breadcrumb {
+    padding: 0.8em;
+}
+
+ul.breadcrumb li {
+    list-style: none;
+    display: inline;
+    color: inherit;
+    margin: 0 5px;
+}
+
+.footer-inner {
+    margin: 0 20em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.footer-inner .menu .menu-row {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+.footer-inner .menu-item {
+    color: inherit;
+    margin-right: 1em;
+    font-weight: bold;
+    list-style: none;
+    display: inline;
+    color: #3c3a3f;
+    font-weight: 500;
+}
+
+.footer-inner input.newsletter-field {
+    padding: 0.2em;
+    background-color: transparent;
+    border: 1px solid #504f4f;
+    padding: 0.6em;
+    position: relative;
+    min-width: 250px;
+}
+
+.footer-inner button.newsletter-button {
+    position: absolute;
+    margin-top: 0.4em;
+    margin-left: -1em;
+    border: none;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.footer-inner .newsletter-heading {
+    margin-bottom: 1em;
+    font-weight: 500;
+    color: #3c3a3f;
+}
+
+.footer-bottom {
+    margin: 0 20em;
+    margin-top: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    color: #3c3a3f;
+}
+
+.footer-bottom .footer-copyright {
+    font-size: 10px;
+}
+
+.footer-socials>a {
+    display: inline;
+    color: #3c3a3f;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.hero-section {
+    color: white;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.hero-section-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section-content {
+    padding: 6.5em 20em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero-section .item-main {
+    display: inline;
+}
+
+.hero-section .item-main h2 {
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0.65em 0;
+}
+
+.hero-section .item-main .type {
+    color: rgba(95, 160, 80, 0.7);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.hero-section .item-main .category {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero-section .item-main p {
+    max-width: 300px;
+}
+
+.hero-section .item-second {
+    width: 25%;
+}
+
+.hero-section .item-second h4 {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 13px;
+    word-wrap: break-word;
+}
+
+.hero-section .item-second hr {
+    margin: 10px 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid rgba(95, 160, 80, 0.7);
+    padding: 0;
+}
+
+.hero-section .item-second .item-meta {
+    margin: 10px 0;
+}
+
+.content {
+    margin: 0 20em;
+}
+
+.showcase {
+    font-weight: 400;
+    color: #3c3a3f;
+}
+
+.showcase .showcase-heading {
+    font-weight: 500;
+    font-size: 25px;
+    color: #1f4393;
+}
+
+.showcase .showcase-heading::after {
+    content: '';
+    margin-top: 5px;
+    display: block;
+    height: 1px;
+    background-color: rgba(95, 160, 80, 0.7);
+    width: 3%;
+}
+
+.showcase-box {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase-box .showcase-item-main {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    flex: 2;
+    padding: 13em 1em 0 4em;
+    top: 0;
+}
+
+.showcase-box .showcase-item-main .showcase-item-floatbox {
+    background-color: white;
+    padding: 4em 4em 0 3em;
+    border-radius: 0 7em 0 0;
+    width: 60%;
+    float: right;
+}
+
+.showcase-box .showcase-items {
+    flex: 1;
+}
+
+.showcase-box .showcase-item-main p {
+    margin-left: 2em;
+}
+
+.showcase-box .showcase-item-main .showcase-item-category {
+    color: rgba(95, 160, 80, 1);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.showcase .showcase-item-meta {
+    color: #5e5e5e;
+}
+
+.showcase .showcase-items {
+    margin-left: 2em;
+}
+
+.showcase .showcase-item {
+    display: block;
+    margin-bottom: 1.8em;
+}
+
+.showcase .showcase-item img.showcase-item-cover {
+    display: block;
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.showcase .showcase-item .showcase-item-category {
+    color: rgba(95, 160, 80, 0.7);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.showcase .showcase-item h4 {
+    margin: 0.8em 0;
+}
+
+.showcase .showcase-item .showcase-item-body {
+    margin: 1em 1em;
+}
+
+.showcase-most-viewed>*:first-child {
+    margin: 0 1em 0 0;
+}
+
+.showcase-most-viewed>*:last-child {
+    margin: 0 0 0 1em;
+}
+
+.showcase-most-viewed>div {
+    margin: 0 1em;
+}
+
+.showcase-item .newsletter-heading {
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 15px;
+    width: 70%;
+    color: #1f4393;
+}
+
+.showcase-item input.newsletter-field {
+    padding: 0.2em;
+    background-color: transparent;
+    border: 2px solid #1f4393;
+    border-top: none;
+    padding: 0.6em;
+    position: relative;
+    min-width: 280px;
+}
+
+.showcase-item button.newsletter-button {
+    position: absolute;
+    margin-top: 0.3em;
+    margin-left: -1em;
+    border: none;
+    padding: 0.3em;
+    cursor: pointer;
+    background-color: #1f4393;
+    color: white;
+    border-radius: 0 0.5em;
+}
