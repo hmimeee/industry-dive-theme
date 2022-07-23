@@ -18,17 +18,21 @@
 				</div>
 				<div class="menu">
 					<ul>
-						<li>Insights</li>
-						<li>Industries</li>
-						<li>Innovations</li>
+						<?php
+						wp_nav_menu(array(
+							'theme_location' => 'primary-menu',
+							'container' => '',
+							'items_wrap' => '%3$s',
+						))
+						?>
 						<li><a href="javascript:;"><i class="fa fa-search"></i></a></li>
 					</ul>
 				</div>
 			</div>
-
-			<ul class="breadcrumb">
-				<li>Insights</li>
-				>
-				<li>All Content</li>
-			</ul>
 		</header>
+
+		<ul class="breadcrumb">
+			<li>Insights</li>
+			>
+			<li>All Content</li>
+		</ul>

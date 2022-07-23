@@ -7,9 +7,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
     font-weight: 500;
 }
@@ -49,14 +55,20 @@ article.post:last-of-type {
 
 .site-header {
     color: white;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .site-footer {
     background-color: #e2e3e4;
+    padding-bottom: 3em !important;
 }
 
 .header-inner {
-    margin: 0 20em;
+    margin: 0 18em;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -93,7 +105,7 @@ ul.breadcrumb li {
 }
 
 .footer-inner {
-    margin: 0 20em;
+    margin: 0 18em;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -106,19 +118,24 @@ ul.breadcrumb li {
 }
 
 .footer-inner .menu-item {
-    color: inherit;
     margin-right: 1em;
-    font-weight: bold;
     list-style: none;
     display: inline;
     color: #3c3a3f;
+}
+
+.footer-inner .menu-item a {
+    color: inherit;
+    font-weight: bold;
+    list-style: none;
+    display: inline;
     font-weight: 500;
 }
 
 .footer-inner input.newsletter-field {
     padding: 0.2em;
     background-color: transparent;
-    border: 1px solid #504f4f;
+    border: 1.5px solid #504f4f;
     padding: 0.6em;
     position: relative;
     min-width: 250px;
@@ -131,6 +148,8 @@ ul.breadcrumb li {
     border: none;
     padding: 0.3em;
     cursor: pointer;
+    border-radius: 0 0.5em;
+    color: #3c3a3f;
 }
 
 .footer-inner .newsletter-heading {
@@ -140,7 +159,7 @@ ul.breadcrumb li {
 }
 
 .footer-bottom {
-    margin: 0 20em;
+    margin: 0 18em;
     margin-top: 1em;
     align-items: center;
     display: flex;
@@ -156,7 +175,7 @@ ul.breadcrumb li {
 .footer-socials>a {
     display: inline;
     color: #3c3a3f;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 5px;
 }
 
@@ -188,6 +207,7 @@ ul.breadcrumb li {
     color: white;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    transition: all 1s;
 }
 
 .hero-section-overlay {
@@ -195,51 +215,67 @@ ul.breadcrumb li {
 }
 
 .hero-section-content {
-    padding: 6.5em 20em;
+    padding: 6.5em 18em;
     align-items: center;
     display: flex;
     justify-content: space-between;
-
 }
 
-.hero-section .item-main {
+.hero-section-item-main {
     display: inline;
+    max-height: 280px;
+    overflow: hidden;
 }
 
-.hero-section .item-main h2 {
+.hero-section-item-main h2 {
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 30px;
     margin: 0.65em 0;
 }
 
-.hero-section .item-main .type {
+.hero-section-item-main h2 a {
+    color: white;
+}
+
+.hero-section-item-main .type {
     color: rgba(95, 160, 80, 0.7);
     font-size: 15px;
     font-weight: bold;
 }
 
-.hero-section .item-main .category {
+.hero-section-item-main .category a {
     font-size: 13px;
     font-weight: bold;
+    color: white;
 }
 
-.hero-section .item-main p {
+.hero-section-item-main p {
     max-width: 300px;
 }
 
-.hero-section .item-second {
-    width: 25%;
+.hero-section .hero-section-second-slide {
+    flex: 0 0 auto;
+    height: 280px;
+    max-width: 40%;
 }
 
-.hero-section .item-second h4 {
+.hero-section .hero-section-second-slide h4 {
     margin: 5px 0;
     font-weight: bold;
     font-size: 13px;
     word-wrap: break-word;
 }
 
-.hero-section .item-second hr {
+.hero-section .hero-section-second-slide h4 a {
+    color: white;
+}
+
+.hero-section-second-slide .item-category a {
+    color: white;
+}
+
+.hero-section .hero-section-second-slide hr {
     margin: 10px 0;
     display: block;
     height: 1px;
@@ -248,17 +284,18 @@ ul.breadcrumb li {
     padding: 0;
 }
 
-.hero-section .item-second .item-meta {
+.hero-section .hero-section-second-slide .item-meta {
     margin: 10px 0;
 }
 
 .content {
-    margin: 0 20em;
+    margin: 0 18em;
 }
 
 .showcase {
     font-weight: 400;
     color: #3c3a3f;
+    margin-top: 3em;
 }
 
 .showcase .showcase-heading {
@@ -286,7 +323,7 @@ ul.breadcrumb li {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     flex: 2;
-    padding: 13em 1em 0 4em;
+    padding: 8em 1em 0 4em;
     top: 0;
 }
 
@@ -294,8 +331,13 @@ ul.breadcrumb li {
     background-color: white;
     padding: 4em 4em 0 3em;
     border-radius: 0 7em 0 0;
-    width: 60%;
+    width: 75%;
     float: right;
+    margin-bottom: -2em;
+}
+
+.showcase-item-floatbox h2 a {
+    color: #3c3a3f;
 }
 
 .showcase-box .showcase-items {
@@ -306,7 +348,11 @@ ul.breadcrumb li {
     margin-left: 2em;
 }
 
-.showcase-box .showcase-item-main .showcase-item-category {
+.showcase-box .showcase-item-category {
+    margin: 0 !important;
+}
+
+.showcase-box .showcase-item-main .showcase-item-category a {
     color: rgba(95, 160, 80, 1);
     font-size: 15px;
     font-weight: 500;
@@ -332,14 +378,15 @@ ul.breadcrumb li {
     object-fit: cover;
 }
 
-.showcase .showcase-item .showcase-item-category {
+.showcase .showcase-item .showcase-item-category a {
     color: rgba(95, 160, 80, 0.7);
     font-size: 12px;
     font-weight: bold;
 }
 
-.showcase .showcase-item h4 {
+.showcase .showcase-item h4 a {
     margin: 0.8em 0;
+    color: #3c3a3f;
 }
 
 .showcase .showcase-item .showcase-item-body {
@@ -358,6 +405,10 @@ ul.breadcrumb li {
     margin: 0 1em;
 }
 
+.showcase-most-viewed .showcase-item-cover {
+    height: 100px !important;
+}
+
 .showcase-item .newsletter-heading {
     margin-bottom: 1em;
     font-weight: bold;
@@ -373,7 +424,7 @@ ul.breadcrumb li {
     border-top: none;
     padding: 0.6em;
     position: relative;
-    min-width: 280px;
+    min-width: 85%;
 }
 
 .showcase-item button.newsletter-button {
@@ -386,4 +437,130 @@ ul.breadcrumb li {
     background-color: #1f4393;
     color: white;
     border-radius: 0 0.5em;
+}
+
+.showcase-filter {
+    padding: 0.6em 2em;
+    border: 2px solid #1f4393;
+    width: fit-content;
+    margin-bottom: 2em;
+    color: #1f4393;
+    font-weight: 700;
+}
+
+.showcase-filter .showcase-filter-dropdown {
+    border: none;
+    color: #1f4393;
+    font-weight: 700;
+    background: white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.showcase-filter .showcase-filter-dropdown option {
+    padding: 1em;
+}
+
+.showcase-updates-top {
+    margin-bottom: 10em;
+}
+
+.showcase-updates-top>*:first-child {
+    margin: 0 1em 0 0;
+}
+
+.showcase-updates-top>*:last-child {
+    margin: 0 0 0 1em;
+}
+
+.showcase-updates-top>div {
+    margin: 0 1em;
+    max-width: 50%;
+}
+
+.showcase-updates-bottom>div {
+    margin: 0 0.4em;
+    max-width: 25%;
+}
+
+.showcase-updates-bottom img {
+    height: 100px !important;
+}
+
+.showcase-updates-bottom>*:last-child {
+    margin: 0 0 0 0.4em;
+}
+
+.showcase-updates-bottom>div {
+    margin: 0 0.4em;
+}
+
+.showcase-updates-top .showcase-item-floatbox {
+    background-color: white;
+    margin: -5em 0.8em -10em 0.8em;
+    padding: 2em;
+}
+
+.showcase-updates-top .showcase-item {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    flex: 2;
+    padding-top: 14em;
+    top: 0;
+}
+
+.showcase-box h4, .showcase-box h2 {
+    margin: 0.6em 0;
+}
+
+.social-share {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    margin-left: 0px;
+}
+
+.social-share>* {
+    display: block;
+    padding: 0.4em;
+    text-align: center;
+    color: white !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-share .social-facebook {
+    background-color: #425a95;
+}
+
+.social-share .social-twitter {
+    background-color: #579dd5;
+}
+
+.social-share .social-google-plus {
+    background-color: #e24c40;
+}
+
+.social-share .social-linkedin {
+    background-color: #2c76b2;
+}
+
+.social-share .social-mail {
+    background-color: #848585;
+}
+
+.load-posts {
+    display: block;
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.load-posts button {
+    padding: 0.6em 1.5em;
+    background-color: white;
+    border: 2px solid #1f4393;
+    color: #1f4393;
+    font-weight: bold;
+    cursor: pointer;
 }

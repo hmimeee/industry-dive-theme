@@ -2,29 +2,34 @@
     <div class="footer-inner">
         <div class="menu footer-first">
             <div class="menu-row">
-                <a href="javascript:;" class="menu-item">Insights</a>
-                <a href="javascript:;" class="menu-item">Industries</a>
-                <a href="javascript:;" class="menu-item">Innovations</a>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'footer-menu',
+                    'container' => '',
+                    'items_wrap' => '%3$s',
+                ))
+                ?>
             </div>
 
             <span class="menu-row">
                 <span class="menu-item">
                     Contact Us
                 </span>
-                <span class="menu-item">
-                    <i class="fa fa-phone"></i> 01782448244
-                </span>
+                <a href="call:1-866-671-5353" class="menu-item">
+                    <i class="fa fa-volume-control-phone"></i> 1-866-671-5353
+                </a>
             </span>
         </div>
 
         <div class="footer-second">
             <p class="newsletter-heading">Subscribe to our newsletter</p>
-            <div>
-                <input class="newsletter-field" placeholder="Enter your email" />
-                <button class="newsletter-button">
+            <form class="newsletter-form" action="<?= admin_url('admin-ajax.php'); ?>" method="post">
+                <input type="hidden" name="action" value="newsletter" />
+                <input name="email" class="newsletter-field" placeholder="Enter your email" />
+                <button type="submit" class="newsletter-button">
                     <i class="fa fa-envelope-open"></i>
                 </button>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -39,7 +44,6 @@
         </div>
     </div>
 </footer>
-</div>
 
 <?php wp_footer() ?>
 </body>
